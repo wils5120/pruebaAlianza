@@ -1,0 +1,40 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create new Client</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="observerForm">
+                    <div>
+                        <div class="d-flex mt-4">
+                            <span class="text col-3">Nombre</span>
+                            <input formControlName="name">
+                        </div>
+                        <div class="d-flex mt-4">
+                            <span class="col-3">Celular</span>
+                            <input type="number" formControlName="phone">
+                        </div>
+                        <div class="d-flex mt-4">
+                            <span class="col-3">E-mail</span>
+                            <input type="email" formControlName="email" email="true"  aria-describedby="emailHelp">
+                        </div>
+                        <div class="d-flex mt-4">
+                            <span class="col-3">Fecha inicio</span>
+                            <input type="date" formControlName="dateStart">
+                        </div>
+                        <div class="d-flex mt-4">
+                            <span class="col-3">id negocio</span>
+                            <input type="text" formControlName="bussines">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="resert()">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="submit()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>

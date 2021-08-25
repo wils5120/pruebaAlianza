@@ -1,0 +1,16 @@
+.home {
+    .custom-border{
+        border-start-start-radius: 15px;
+        border-end-start-radius: 15px;
+        border-start-end-radius: 0px;
+        border-end-end-radius: 0px
+    }
+    .btn-custom{
+        background-color: #fff;
+        color: #6c757d;
+        border-start-end-radius: 15px;
+        border-end-end-radius: 15px;
+        border-color:#ced4da ;
+        border-left: none;
+    }
+}

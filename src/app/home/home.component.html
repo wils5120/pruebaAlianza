@@ -1,0 +1,38 @@
+<div class="pt-5 mt-5 home">
+    <button type="button" class="btn btn-primary me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">New</button>
+    <button type="button" class="btn btn-primary" (click)="download()" >Export</button>
+
+    <!-- search -->
+
+    <div class="d-flex col-9 col-xl-3 col-md-4 mt-4">
+        <input type="text" class="form-control custom-border" id="exampleInputEmail1" placeholder="Enter shared key" (keyup)="find($event)">
+        <button type="button" class="btn btn-primary btn-custom" (click)="getDataKeys()" >Search</button>
+    </div>
+
+    <!-- table -->
+    <div class="mt-5 pe-5">
+        <h5>Clientes</h5>
+    </div>
+    <div class="mt-3 pe-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let title of headerTile">{{title.name}} </th>
+                    <th scope="col">edit </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of dataTable">
+                    <th scope="row" class="">{{data.key}}</th>
+                    <td scope="row">{{data.bussines}}</td>
+                    <td scope="row">{{data.email}}</td>
+                    <td scope="row">{{data.phone}}</td>
+                    <td scope="row">{{data.date}}</td>
+                    <td scope="row" class="text-center"> <i class="fs-4 bi-pencil-fill"></i> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-create (reLoad)="getDate()" ></app-create>
